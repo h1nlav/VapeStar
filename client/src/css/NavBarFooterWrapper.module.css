@@ -17,6 +17,10 @@
     margin: 0 auto;
 }
 
+.wrapper__contentIndent {
+    padding-bottom: 50px;
+}
+
 @media (min-width: 1440px) {
     .wrapper__content {
         width: 80%;

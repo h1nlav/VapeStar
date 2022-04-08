@@ -26,11 +26,11 @@ export const publicRoutes = [
 ];
 
 export const authRoutes = [
-    { path: USER_ROUTE, component: <NavBarFooterWrapper component={<UserPage />} /> },
-    { path: USER_ROUTE + '/:option', component: <NavBarFooterWrapper component={<UserPage />} /> },
+    { path: USER_ROUTE, component: <NavBarFooterWrapper component={<UserPage />} isIndentDown={false} /> },
+    { path: USER_ROUTE + '/:option', component: <NavBarFooterWrapper component={<UserPage />} isIndentDown={false} /> },
 ]
 
 export const adminRoutes = [
-    { path: ADMIN_ROUTE, component: <NavBarFooterWrapper component={<AdminPage />} /> },
-    { path: ADMIN_ROUTE + '/:option', component: <NavBarFooterWrapper component={<AdminPage />} /> },
+    { path: ADMIN_ROUTE, component: <NavBarFooterWrapper component={<AdminPage />} isIndentDown={false} /> },
+    { path: ADMIN_ROUTE + '/:option', component: <NavBarFooterWrapper component={<AdminPage />} isIndentDown={false} /> },
 ]

@@ -11,6 +11,7 @@
     padding-right: 10vw;
     overflow-y: auto;
     overflow-x: hidden;
+    padding-bottom: 50px;
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
