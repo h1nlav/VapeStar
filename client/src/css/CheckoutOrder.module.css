@@ -1,0 +1,142 @@
+.checkout {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.checkout__header {
+    margin-top: 50px;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 36px;
+}
+
+.checkout__content {
+    display: flex;
+}
+
+.checkout__leftContent {
+    width: calc(100% - 320px);
+    padding-right: 48px;
+}
+
+.checkout__rightContent {
+    width: 320px
+}
+
+.orderCreated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderCreated__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.orderCreated__icon {
+    width: 100px;
+    height: 100px;
+    mask-size: 100%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    margin-bottom: 25px;
+    background-color: #fe5000;
+    mask-image: url('../static/check_mark.svg');
+}
+
+.orderCreated__header {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #221f1f;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.orderCreated__text {
+    font-size: 2rem;
+    color: #221f1f;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.orderCreated__content a {
+    width: 100%;
+}
+
+.orderCreated__button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fe5000;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.orderCreated__button:focus {
+    outline: none;
+}
+
+.orderCreated__button span {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (hover: hover) {
+    .orderCreated__button:hover {
+        background-color: #221f1f;
+    }
+}
+
+@media (hover: none) {
+    .orderCreated__button:active {
+        background-color: #221f1f;
+    }
+}
+
+
+@media (max-width: 1600px) {
+    .checkout {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1025px) {
+    .checkout__content {
+        flex-direction: column;
+    }
+
+    .checkout__leftContent {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .checkout__rightContent {
+        width: 100%;
+        margin-top: 36px;
+    }
+}
+
+@media (max-width: 460px) {
+    .checkout__header {
+        padding-left: 10px;
+    }
+
+    .orderCreated__content {
+        width: 90%;
+    }
+}

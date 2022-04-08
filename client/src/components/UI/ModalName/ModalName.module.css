@@ -1,0 +1,44 @@
+.modalName {
+    align-items: center;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 24px 13px 24px;
+    width: 100%;
+}
+
+.modalName__text {
+    color: #221f1f;
+    font-size: 2.2rem;
+    margin-right: 20px;
+    overflow: hidden;
+    padding-top: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    line-height: 24px;
+}
+
+.modalName__img {
+    background: #221f1f;
+    height: 22px;
+    mask-image: url('../../../static/cross.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 80%;
+    max-width: 22px;
+    min-width: 22px;
+    transition: 0.1s linear;
+}
+
+@media (hover: hover) {
+    .modalName__img:hover {
+        background: #f84147;
+    }
+}
+
+@media (hover: none) {
+    .modalName__img:active {
+        background: #f84147;
+    }
+}

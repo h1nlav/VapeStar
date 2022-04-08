@@ -1,0 +1,172 @@
+.changeCategoryForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.changeCategoryForm__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.changeCategoryForm__label {
+    color: #a6a5a5;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.changeCategoryForm__input {
+    border-radius: 4px;
+    border: 1px solid #a6a5a5;
+    font-size: 1.5rem;
+    height: 40px;
+    margin-right: 10px;
+    outline: none;
+    padding: 0 12px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+
+.filterContainer {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.filterContainer__removeFilter {
+    background-color: #f6f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 40px;
+    min-width: 40px;
+    transition: 0.1s linear;
+}
+
+.filterContainer__removeFilter div {
+    width: 100%;
+    height: 40px;
+    background: #888;
+    mask-image: url('../../../../static/trash_can.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 50%;
+}
+
+.changeCategoryForm__addFilter {
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    transition: 0.2s linear;
+    margin-top: 10px;
+}
+
+.changeCategoryForm__addFilter span {
+    font-size: 1.5rem;
+}
+
+.changeCategoryForm__buttons {
+    margin-top: 20px;
+}
+
+.changeCategoryForm__saveButton,
+.changeCategoryForm__cancelButton {
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    margin-right: 15px;
+    padding: 10px 40px;
+    transition: 0.1s linear;
+}
+
+.changeCategoryForm__saveButton {
+    background-color: #5cb85d;
+}
+
+.changeCategoryForm__cancelButton {
+    background-color: #f5f5f5;
+    color: #221f1f;
+}
+
+.changeCategoryForm__saveButtonNotActive {
+    background-color: #f5f5f5;
+    color: #d1d1d1;
+    cursor: not-allowed;
+}
+
+@media (hover: hover) {
+    .filterContainer__removeFilter:hover {
+        background-color: #f84147;
+    }
+    
+    .filterContainer__removeFilter:hover div {
+        background-color: #fff;
+    }
+
+    .changeCategoryForm__addFilter:hover {
+        background-color: #e3e3e3;
+    } 
+
+    .changeCategoryForm__saveButton:hover {
+        background-color: #221f1f;
+    }
+
+    .changeCategoryForm__cancelButton:hover {
+        background-color: #e3e3e3;
+    }
+
+    .changeCategoryForm__saveButtonNotActive:hover {
+        background-color: #f5f5f5;
+        color: #d1d1d1;
+    }
+}
+
+@media (hover: none) {
+    .filterContainer__removeFilter:active {
+        background-color: #f84147;
+    }
+    
+    .filterContainer__removeFilter:active div {
+        background-color: #fff;
+    }
+
+    .changeCategoryForm__addFilter:active {
+        background-color: #e3e3e3;
+    } 
+
+    .changeCategoryForm__saveButton:active {
+        background-color: #221f1f;
+    }
+
+    .changeCategoryForm__cancelButton:active {
+        background-color: #e3e3e3;
+    }
+
+    .changeCategoryForm__saveButtonNotActive:active {
+        background-color: #f5f5f5;
+        color: #d1d1d1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .changeCategoryForm__buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .changeCategoryForm__saveButton,
+    .changeCategoryForm__cancelButton {
+        width: 48%;
+        margin-right: 0;
+    }
+}

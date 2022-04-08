@@ -1,0 +1,69 @@
+.selectedFilters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selectedFilters__removeAll,
+.selectedFilters__filter {
+    height: 32px;
+    margin-right: 8px;
+    margin-top: 10px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    color: #333;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.selectedFilters__removeAll {
+    background-color: #fff;
+    border: 1px solid #ff8989;
+}
+
+.selectedFilters__filter {
+    background-color: #fff;
+    border: 1px solid #d2d2d2;
+}
+
+.selectedFilters__filter>span {
+    display: block;
+    margin-right: 7px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.selectedFilters__filter>div {
+    margin-top: 1px;
+    width: 9px;
+    height: 9px;
+    background-image: url('../../../static/cross.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (hover: hover) {
+    .selectedFilters__removeAll:hover {
+        background-color: #ff8989;
+        color: #fff;
+    }
+
+    .selectedFilters__filter:hover {
+        background-color: #eee;
+    }
+}
+
+@media (hover: none) {
+    .selectedFilters__removeAll:active {
+        background-color: #ff8989;
+        color: #fff;
+    }
+
+    .selectedFilters__filter:active {
+        background-color: #eee;
+    }
+}

@@ -1,0 +1,135 @@
+.modal__registration {
+    padding: 24px;
+}
+
+.name,
+.surname,
+.mobileNum,
+.email,
+.password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.name__text,
+.surname__text,
+.mobileNum__text,
+.email__text,
+.password__text {
+    margin-bottom: 7px;
+    font-size: 1.4rem;
+    color: #797878;
+}
+
+.name__input,
+.surname__input,
+.mobileNum__input,
+.email__input,
+.password__input {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #797878;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+.password_wrapper {
+    display: flex;
+}
+
+.password__input {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.password_img {
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    border: 1px solid #797878;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.password_img div {
+    width: 100%;
+    height: 100%;
+    background-color: #221f1f;
+    mask-image: url('../../../../static/eye_closed.svg');
+    mask-size: 60%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.1s linear;
+}
+
+.password_visibleImg div {
+    padding-top: 2px;
+    mask-image: url('../../../../static/eye.svg');
+}
+
+.registrationAttempt__button {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 17px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fe5000;
+    transition: 0.2s linear;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.registrationAttempt__button span {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__link {
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #221f1f;
+    transition: 0.1s linear;
+}
+
+@media (hover: hover) {
+    .password_img:hover div {
+        background-color: #fe5000;
+    }
+
+    .registrationAttempt__button:hover {
+        background-color: #221f1f;
+    }
+
+    .login__link:hover {
+        color: #fe5000;
+    }
+}
+
+@media (hover: none) {
+    .password_img:active div {
+        background-color: #fe5000;
+    }
+
+    .registrationAttempt__button:active {
+        background-color: #221f1f;
+    }
+
+    .login__link:active {
+        color: #fe5000;
+    }
+}

@@ -1,0 +1,134 @@
+.changePersonalInfoForm {
+    border: 1px solid #e9e9e9;
+    padding: 20px;
+}
+
+.changePersonalInfoForm__fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.changePersonalInfoForm__field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.changePersonalInfoForm__label {
+    color: #a6a5a5;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.changePersonalInfoForm__input {
+    border-radius: 4px;
+    border: 1px solid #a6a5a5;
+    font-size: 1.5rem;
+    height: 40px;
+    outline: none;
+    padding: 0 12px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.changePersonalInfoForm__fields>div {
+    width: 48%;
+}
+
+.changePersonalInfoForm__buttons {
+    margin-top: 10px;
+    display: flex;
+}
+
+.changePersonalInfoForm__saveButton,
+.changePersonalInfoForm__cancelButton {
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    margin-right: 15px;
+    padding: 10px 40px;
+    transition: 0.1s linear;
+}
+
+.changePersonalInfoForm__saveButton {
+    background-color: #5cb85d;
+}
+
+.changePersonalInfoForm__cancelButton {
+    background-color: #f5f5f5;
+    color: #221f1f;
+}
+
+
+
+.changePersonalInfoForm__saveButtonNotActive {
+    background-color: #f5f5f5;
+    color: #d1d1d1;
+    cursor: not-allowed;
+}
+
+@media (hover: hover) {
+    .changePersonalInfoForm__saveButton:hover {
+        background-color: #221f1f;
+    }
+
+    .changePersonalInfoForm__cancelButton:hover {
+        background-color: #e3e3e3;
+    }
+
+    .changePersonalInfoForm__saveButtonNotActive:hover {
+        background-color: #f5f5f5;
+        color: #d1d1d1;
+    }
+}
+
+@media (hover: none) {
+    .changePersonalInfoForm__saveButton:active {
+        background-color: #221f1f;
+    }
+
+    .changePersonalInfoForm__cancelButton:active {
+        background-color: #e3e3e3;
+    }
+
+    .changePersonalInfoForm__saveButtonNotActive:active {
+        background-color: #f5f5f5;
+        color: #d1d1d1;
+    }
+}
+
+@media (max-width: 600px) {
+    .changePersonalInfoForm__fields>div {
+        width: 100%;
+    }
+
+    .changePersonalInfoForm__buttons {
+        justify-content: space-between;
+    }
+
+    .changePersonalInfoForm__saveButton,
+    .changePersonalInfoForm__cancelButton {
+        width: 48%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .changePersonalInfoForm__buttons {
+        flex-wrap: wrap;
+    }
+
+    .changePersonalInfoForm__saveButton,
+    .changePersonalInfoForm__cancelButton {
+        width: 100%;
+    }
+
+    .changePersonalInfoForm__cancelButton {
+        margin-top: 15px;
+    }
+}

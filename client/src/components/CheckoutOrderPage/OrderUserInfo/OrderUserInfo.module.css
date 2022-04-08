@@ -1,0 +1,164 @@
+.userInfo {
+    padding-bottom: 36px;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.userInfo__sectionNumber {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: #e9e9e9;
+    font-size: 1.4rem;
+    line-height: 24px;
+    text-align: center;
+}
+
+.userInfo__content {
+    width: 100%;
+}
+
+.userInfo__name {
+    display: block;
+    line-height: 24px;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: #221f1f;
+}
+
+.userinfo__authoriseOffer {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.userinfo__authoriseOffer button {
+    padding: 8px 16px;
+
+    border-radius: 50px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+}
+
+.userinfo__authoriseOffer button:first-of-type {
+    border: 2px solid #00a046;
+    color: #221f1f;
+}
+
+.userinfo__authoriseOffer button:last-of-type {
+    color: #3e77aa;
+}
+
+.userinfo__userExistAlert {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #f84147;
+    background-color: rgba(248, 65, 71, 0.15);
+    margin-bottom: 16px;
+    border-radius: 4px;
+    line-height: 1.3;
+}
+
+.userinfo__userExistAlert span {
+    color: #221f1f;
+    font-size: 1.4rem;
+}
+
+.userinfo__userExistAlert span:last-of-type {
+    color: #3e77aa;
+    cursor: pointer;
+}
+
+
+.fields {
+    width: 100%;
+}
+
+.fields__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.fields__flex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.fields__flex .fields__field {
+    width: 48%;
+}
+
+.fields__label {
+    margin-bottom: 7px;
+    font-size: 1.4rem;
+    color: #797878;
+    width: 100%
+}
+
+.fields__input {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #797878;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+@media (hover: hover) {
+    .userinfo__authoriseOffer button:last-of-type:hover {
+        color: #fe5000;
+    }
+
+    .userinfo__userExistAlert span:last-of-type:hover {
+        color: #fe5000;
+    }
+}
+
+@media (hover: none) {
+    .userinfo__authoriseOffer button:last-of-type:active {
+        color: #fe5000;
+    }
+
+    .userinfo__userExistAlert span:last-of-type:active {
+        color: #fe5000;
+    }
+}
+
+
+@media (max-width: 1025px) {
+    .userInfo {
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .userInfo {
+        padding-right: 30px;
+    }
+
+    .fields__flex {
+        flex-wrap: wrap;
+    }
+
+    .fields__flex .fields__field {
+        width: 100%;
+    }
+
+    .fields__flex .fields__field:first-of-type {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 460px) {
+    .userInfo {
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+}

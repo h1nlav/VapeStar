@@ -1,0 +1,95 @@
+.modal {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s linear;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.modal__content {
+    width: 500px;
+    background: #fff;
+    border-radius: 8px;
+    animation: modalContentAnimation 0.25s ease-in-out;
+}
+
+.modal__message {
+    padding: 30px 20px;
+    color: #222;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+
+.modal__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 20px 20px;
+}
+
+.modal__confirmationButton,
+.modal__cancelButton {
+    padding: 10px 20px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    transition: 0.1s linear;
+    cursor: pointer;
+    color: #fff;
+}
+
+.modal__confirmationButton {
+    background-color: #f84147;
+}
+
+.modal__cancelButton {
+    background-color: #f2f2f2;
+    color: #221f1f;
+}
+
+@media (hover: hover) {
+    .modal__confirmationButton:hover {
+        background-color: #221f1f;
+    }
+
+    .modal__cancelButton:hover {
+        background-color: #e3e3e3;
+    }
+}
+
+@media (hover: none) {
+    .modal__confirmationButton:active {
+        background-color: #221f1f;
+    }
+
+    .modal__cancelButton:active {
+        background-color: #e3e3e3;
+    }
+}
+
+@media (max-width: 700px) {
+    .modal__content {
+        width: 90vw;
+    }
+}
+
+@keyframes modalContentAnimation {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

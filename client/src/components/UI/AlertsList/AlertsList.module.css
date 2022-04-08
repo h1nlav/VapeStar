@@ -1,0 +1,26 @@
+.alerts {
+    width: 100%;
+}
+
+.alerts__item {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.alerts__item div {
+    min-width: 12px;
+    min-height: 12px;
+    margin-right: 5px;
+    background-color: #f84147;
+    mask-image: url('../../../static/alert.svg');
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.alerts__item span {
+    padding-top: 1px;
+    font-size: 1.2rem;
+    color: #f84147;
+}

@@ -1,0 +1,35 @@
+.reviewsProductsList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.reviewsProductsList__name {
+    margin: 50px auto 40px;
+}
+
+.reviewsProductsList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.reviewsProductsList__notFound span {
+    font-size: 1.8rem;
+    color: #221f1f;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1025px) {
+    .reviewsProductsList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviewsProductsList {
+        width: 95%;
+    }
+
+    .reviewsProductsList__name h1 {
+        font-size: 3rem;
+    }
+}

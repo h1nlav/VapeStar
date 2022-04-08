@@ -1,0 +1,218 @@
+.modal {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s linear;
+    overflow-y: auto;
+}
+
+.modal__wrapper {
+    background-color: #fff;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px 10px 25px;
+}
+
+.rating__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating__item {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.rating__star {
+    background-color: #d2d2d2;
+    height: 25px;
+    mask-image: url('../../../static/star.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    transition: 0.1s linear;
+    width: 25px;
+}
+
+.rating__selectedStar {
+    background-color: #fe5000;
+}
+
+.rating__item span {
+    color: #797878;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    transition: 0.1s linear;
+}
+
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 25px 20px 25px;
+}
+
+.comment__text {
+    color: #797878;
+    font-size: 1.4rem;
+    margin-bottom: 7px;
+}
+
+.comment__textarea {
+    border-radius: 4px;
+    border: 1px solid #d2d2d2;
+    font-size: 1.5rem;
+    max-height: 400px;
+    min-height: 200px;
+    outline: none;
+    padding: 12px 20px;
+    resize: vertical;
+    width: 100%;
+}
+
+.modal__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+.modal__cancel,
+.modal__accept {
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    height: 40px;
+    padding: 0 16px;
+    text-align: center;
+    transition: 0.1s linear;
+    width: 47%;
+    outline: none;
+}
+
+.modal__cancel {
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
+    color: #221f1f;
+}
+
+.modal__accept {
+    background: #fe5000;
+    color: #fff;
+}
+
+@media (hover: hover) {
+    .rating__item:hover span {
+        color: #292929;
+    }
+    .modal__accept:hover {
+        background: #221f1f;
+    }
+    
+    .modal__cancel:hover {
+        background-color: #ebebeb;
+    }
+}
+
+@media (hover: none) {
+    .rating__item:active span {
+        color: #292929;
+    }
+    .modal__accept:active {
+        background: #221f1f;
+    }
+    
+    .modal__cancel:active {
+        background-color: #ebebeb;
+    }
+}
+
+@media (min-width: 560px) {
+    .modal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal__wrapper {
+        animation: modalContentAnimationLarge 0.25s ease-in-out;
+        border-radius: 8px;
+        width: 500px;
+        max-height: 85vh;
+        overflow: hidden;
+    }
+
+    .modal__content {
+        max-height: calc(85vh - 60px);
+        overflow: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .modal {
+        top: 72px;
+    }
+
+    .modal__wrapper {
+        position: fixed;
+        width: 100vw;
+        height: calc(100vh - 72px);
+        border-radius: 0;
+        overflow: hidden;
+        animation: modalContentAnimationSmall 0.25s ease-in-out;
+    }
+
+    .modal__content {
+        height: calc(100% - 60px);
+        overflow: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .modal__buttons {
+        flex-direction: column-reverse;
+    }
+
+    .modal__cancel,
+    .modal__accept {
+        width: 100%;
+    }
+
+    .modal__accept {
+        margin-bottom: 15px;
+    }
+}
+
+@keyframes modalContentAnimationLarge {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes modalContentAnimationSmall {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}

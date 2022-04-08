@@ -1,0 +1,29 @@
+.statusesList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.statusesList__name {
+    margin: 50px auto 40px;
+}
+
+.statusesList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1025px) {
+    .statusesList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .statusesList {
+        width: 95%;
+    }
+
+    .statusesList__name h1 {
+        font-size: 3rem;
+    }
+}

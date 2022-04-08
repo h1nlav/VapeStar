@@ -1,0 +1,35 @@
+.ordersList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.ordersList__name {
+    margin: 50px auto 40px;
+}
+
+.ordersList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.ordersList__notfound span {
+    font-size: 1.8rem;
+    color: #221f1f;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 1025px) {
+    .ordersList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ordersList {
+        width: 95%;
+    }
+
+    .ordersList__name h1 {
+        font-size: 3rem;
+    }
+}

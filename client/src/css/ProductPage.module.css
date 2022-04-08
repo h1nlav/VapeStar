@@ -1,0 +1,27 @@
+.productPage {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.productPage__content {
+    width: 100%;
+}
+
+@media (max-width: 1600px) {
+    .productPage {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .productPage {
+        padding-top: 35px;
+    }
+}
+
+@media (max-width: 420px) {
+    .productPage {
+        padding-top: 30px;
+    }
+}

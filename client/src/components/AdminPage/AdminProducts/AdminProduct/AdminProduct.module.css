@@ -1,0 +1,180 @@
+.product {
+    margin-bottom: 10px;
+}
+
+.shortInfo {
+    align-items: center;
+    border: 1px solid #e9e9e9;
+    cursor: pointer;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+}
+
+.shortInfo__link {
+    color: #196bb3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.shortInfo__link:hover {
+    color: #fe5000;
+    text-decoration: underline;
+}
+
+.shortInfo__name,
+.shortInfo__category {
+    font-size: 1.6rem;
+    margin-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.3;
+}
+
+.shortInfo__name {
+    width: 100%;
+}
+
+.shortInfo__category {
+    font-size: 1.3rem;
+    min-width: 25%;
+    max-width: 25%;
+}
+
+.product__opened {
+    border: 1px solid #e9e9e9;
+    border-top: none;
+    padding: 20px;
+}
+
+.fullInfo__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.fullInfo__label {
+    color: #a6a5a5;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.fullInfo__value,
+.fullInfo__infoName,
+.fullInfo__infoValue {
+    color: #222;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+
+.fullInfo__info {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.fullInfo__infoName {
+    margin-right: 10px;
+    width: 40%;
+}
+
+.fullInfo__infoValue {
+    width: calc(70% - 10px);
+    width: calc(70% - 10px);
+}
+
+.fullInfo__pics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fullInfo__pic {
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #e9e9e9;
+    cursor: pointer;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 100px;
+    padding: 1px;
+}
+
+.fullInfo__pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.fullInfo__buttons {
+    margin-top: 10px;
+}
+
+.fullInfo__removeButton,
+.fullInfo__editButton {
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    margin-right: 15px;
+    padding: 10px 40px;
+    transition: 0.1s linear;
+}
+
+.fullInfo__removeButton {
+    background-color: #f84147;
+}
+
+.fullInfo__editButton {
+    background-color: #5cb85d;
+}
+
+@media (hover: hover) {
+    .product__link:hover {
+        text-decoration: underline;
+    }
+
+    .fullInfo__removeButton:hover,
+    .fullInfo__editButton:hover {
+        background-color: #221f1f;
+    }
+}
+
+@media (hover: none) {
+    .product__link:active {
+        text-decoration: underline;
+    }
+
+    .fullInfo__removeButton:active,
+    .fullInfo__editButton:active {
+        background-color: #221f1f;
+    }
+}
+
+@media (max-width: 768px) {
+    .shortInfo__category {
+        display: none;
+    }
+
+    .fullInfo__buttons {
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .fullInfo__removeButton,
+    .fullInfo__editButton {
+        width: 48%;
+        margin-right: 0;
+    }
+}

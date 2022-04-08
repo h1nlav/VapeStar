@@ -1,0 +1,123 @@
+.payment {
+    padding: 36px 0;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.payment__sectionNumber {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: #e9e9e9;
+    font-size: 1.4rem;
+    line-height: 24px;
+    text-align: center;
+}
+
+.payment__content {
+    width: 100%;
+}
+
+.payment__name {
+    display: block;
+    line-height: 24px;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: #221f1f;
+}
+
+
+
+.payment__field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.payment__field:last-of-type {
+    margin-bottom: 0;
+}
+
+.payment__field input {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.payment__field label {
+    padding-left: 40px;
+    color: #221f1f;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.payment__field label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border: 1px solid #d2d2d2;
+    border-radius: 50%;
+    position: absolute;
+    top: 8;
+    left: 0;
+    z-index: 1;
+    transition: border-color 0.2s linear;
+}
+
+.payment__field label::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    background: #fe5000;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 5px;
+    z-index: 1;
+    transition: opacity 0.2s linear;
+}
+
+.payment__selectedField label::after {
+    opacity: 1;
+}
+
+@media (hover: hover) {
+    .payment__field:hover label::before {
+        border-color: #221f1f;
+    }
+}
+
+@media (hover: none) {
+    .payment__field:active label::before {
+        border-color: #221f1f;
+    }
+}
+
+@media (max-width: 1025px) {
+    .payment {
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .payment {
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 460px) {
+    .payment {
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+}

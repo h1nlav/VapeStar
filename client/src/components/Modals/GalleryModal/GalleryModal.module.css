@@ -1,0 +1,163 @@
+.modal {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s linear;
+}
+
+.modal__content {
+    position: absolute;
+    top: 7%;
+    bottom: 7%;
+    left: 7%;
+    right: 7%;
+    background: #fff;
+    border-radius: 8px;
+    animation: modalContentAnimation 0.25s ease-in-out;
+}
+
+@keyframes modalContentAnimation {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pics {
+    width: 100%;
+    height: calc(100% - 58px);
+    padding: 24px;
+}
+
+
+.picsList {
+    width: 100%;
+    height: calc(100% - 25px);
+    display: flex;
+}
+
+.picsList__button {
+    min-width: 25px;
+    max-width: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.picsList__buttonNotActive {
+    opacity: 0;
+    cursor: default;
+}
+
+.picsList__leftArrow,
+.picsList__rightArrow {
+    width: 25px;
+    height: 25px;
+    background: #221f1f;
+    mask-image: url('../../../static/arrow.svg');
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: 0.1s linear;
+}
+
+.picsList__leftArrow {
+    transform: rotate(-90deg);
+}
+
+.picsList__rightArrow {
+    transform: rotate(90deg);
+}
+
+
+.picsList__content {
+    width: calc(100% - 50px);
+    height: calc(100% - 25px);
+    overflow: hidden;
+}
+
+.picsList_allItems {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: 0.2s linear;
+}
+
+.picsList__item {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.picsList__item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+}
+
+.dots {
+    min-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots__itemContainer {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots__item {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #d2d2d2;
+}
+
+.dots__selectedItem {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #fe5000;
+}
+
+@media (hover: hover) {
+
+    .picsList__button:hover .picsList__leftArrow,
+    .picsList__button:hover .picsList__rightArrow {
+        background: #f84147;
+    }
+
+    .dots__itemContainer:hover .dots__item {
+        background-color: #797878;
+    }
+}
+
+@media (hover: none) {
+
+    .picsList__button:active .picsList__leftArrow,
+    .picsList__button:active .picsList__rightArrow {
+        background: #f84147;
+    }
+
+    .dots__itemContainer:active .dots__item {
+        background-color: #797878;
+    }
+}

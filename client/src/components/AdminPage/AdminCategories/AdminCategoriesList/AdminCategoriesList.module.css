@@ -1,0 +1,30 @@
+.categoriesList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.categoriesList__name {
+    margin: 50px auto 40px;
+}
+
+.categoriesList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+
+@media (max-width: 1025px) {
+    .categoriesList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .categoriesList {
+        width: 95%;
+    }
+
+    .categoriesList__name h1 {
+        font-size: 3rem;
+    }
+}

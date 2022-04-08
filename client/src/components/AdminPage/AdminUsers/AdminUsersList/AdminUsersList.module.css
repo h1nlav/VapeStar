@@ -1,0 +1,37 @@
+.usersList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.usersList__name {
+    margin: 50px auto 40px;
+}
+
+.usersList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.usersList__count {
+    margin-bottom: 40px;
+}
+
+.usersList__count span {
+    font-size: 1.9rem;
+}
+
+@media (max-width: 1025px) {
+    .usersList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .usersList {
+        width: 95%;
+    }
+
+    .usersList__name h1 {
+        font-size: 3rem;
+    }
+}

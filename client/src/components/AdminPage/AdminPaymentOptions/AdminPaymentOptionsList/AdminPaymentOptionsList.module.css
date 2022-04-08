@@ -1,0 +1,29 @@
+.paymentOptionsList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.paymentOptionsList__name {
+    margin: 50px auto 40px;
+}
+
+.paymentOptionsList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1025px) {
+    .paymentOptionsList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .paymentOptionsList {
+        width: 95%;
+    }
+
+    .paymentOptionsList__name h1 {
+        font-size: 3rem;
+    }
+}

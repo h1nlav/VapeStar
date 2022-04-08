@@ -1,0 +1,37 @@
+.deliveryCitiesList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.deliveryCitiesList__name {
+    margin: 50px auto 40px;
+}
+
+.deliveryCitiesList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.deliveryCitiesList__count {
+    margin-bottom: 40px;
+}
+
+.deliveryCitiesList__count span {
+    font-size: 1.9rem;
+}
+
+@media (max-width: 1025px) {
+    .deliveryCitiesList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .deliveryCitiesList {
+        width: 95%;
+    }
+
+    .deliveryCitiesList__name h1 {
+        font-size: 3rem;
+    }
+}

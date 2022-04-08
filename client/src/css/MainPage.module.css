@@ -1,0 +1,44 @@
+.main {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main__text {
+    width: 100%;
+    margin: 40px auto 30px;
+}
+
+.main__text h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.main__productList {
+    border-top: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
+    border-radius: 0;
+}
+
+@media (max-width: 1024px) {
+    .main__text {
+        margin: 35px auto 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main__text h1 {
+        font-size: 3.3rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .main__text {
+        margin: 30px auto 25px;
+    }
+
+    .main__text h1 {
+        font-size: 3rem;
+    }
+}

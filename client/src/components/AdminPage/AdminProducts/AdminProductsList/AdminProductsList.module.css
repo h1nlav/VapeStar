@@ -1,0 +1,39 @@
+.productsList {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.productsList__name {
+    margin: 50px auto 40px;
+}
+
+.productsList__name h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.productsList__count {
+    margin-bottom: 40px;
+}
+
+.productsList__count span {
+    font-size: 1.9rem;
+    line-height: 1.3;
+}
+
+@media (max-width: 1025px) {
+    .productsList__name {
+        margin: 45px auto 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .productsList {
+        width: 95%;
+    }
+
+    .productsList__name h1 {
+        font-size: 3rem;
+    }
+}

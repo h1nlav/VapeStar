@@ -1,0 +1,189 @@
+.search {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding-top: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.search__container {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.active {
+    z-index: 5;
+}
+
+.search__bgOn {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s linear;
+}
+
+.search__bgOff {
+    z-index: -1;
+}
+
+.search__input {
+    height: 40px;
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    outline: none;
+    cursor: text;
+    font-size: 1.5rem;
+    transition: width 0.25s ease-in-out;
+}
+
+.search__imgContainer {
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 0 4px 4px 0;
+}
+
+.search__img {
+    height: 100%;
+    width: 100%;
+    background-color: #221f1f;
+    mask-image: url('../../../../static/search.svg');
+    mask-repeat: no-repeat;
+    mask-size: 45%;
+    mask-position: center;
+}
+
+.search__imgActive {
+    mask-image: url('../../../../static/cross.svg');
+    mask-size: 35%;
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+}
+
+.search__offersList {
+    position: absolute;
+    z-index: 5;
+    top: 56px;
+    width: 100%;
+    max-height: calc(70vh - 72px);
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+    animation: offersListAnimation 0.25s ease-in-out;
+}
+
+.search__offersListContainer {
+    width: 100%;
+    max-height: calc(70vh - 72px);
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.search__offersNotFound,
+.search__allOffers {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #221f1f;
+    line-height: 1.3;
+    text-align: center;
+    padding: 10px;
+}
+
+.search__allOffers {
+    padding: 15px 0;
+    cursor: pointer;
+    transition: color 0.1s linear;
+}
+
+@media (hover: hover) {
+    .search__allOffers:hover {
+        color: #fe5000;
+    }
+
+    .search__imgActive:hover {
+        background-color: #fe5000;
+    }
+}
+
+@media (hover: none) {
+    .search__allOffers:active {
+        color: #fe5000;
+    }
+
+    .search__imgActive:active {
+        background-color: #fe5000;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .active {
+        position: fixed;
+        top: 16px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 70vw;
+        animation: modalAnimationMedium 0.25s ease-in-out;
+    }
+}
+
+@media (max-width: 1024px) {
+    .active {
+        position: fixed;
+        top: 16px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 80vw;
+        animation: modalAnimationSmall 0.25s ease-in-out;
+    }
+}
+
+@keyframes modalAnimationMax {
+    0% {
+        width: 30vw;
+    }
+
+    100% {
+        width: 50vw;
+    }
+}
+
+@keyframes modalAnimationLarge {
+    0% {
+        width: 40vw;
+    }
+
+    100% {
+        width: 60vw;
+    }
+}
+
+@keyframes modalAnimationMedium {
+    0% {
+        width: 50vw;
+    }
+
+    100% {
+        width: 70vw;
+    }
+}
+
+@keyframes modalAnimationSmall {
+    0% {
+        width: 60vw;
+    }
+
+    100% {
+        width: 80vw;
+    }
+}

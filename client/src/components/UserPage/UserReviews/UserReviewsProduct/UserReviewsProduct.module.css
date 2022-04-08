@@ -1,0 +1,51 @@
+.product {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.shortInfo {
+    align-items: center;
+    border: 1px solid #e9e9e9;
+    cursor: pointer;
+    display: flex;
+    padding: 20px;
+}
+
+.shortInfo__name {
+    font-size: 1.6rem;
+    margin-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+    width: 100%;
+}
+
+
+.shortInfo__link {
+    color: #196bb3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.reviews {
+    margin: 10px 0 20px;
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: 1px solid #e9e9e9;
+}
+
+@media (hover: hover) {
+    .shortInfo__link:hover {
+        color: #fe5000;
+        text-decoration: underline;
+    }
+}
+
+@media (hover: none) {
+    .shortInfo__link:active {
+        color: #fe5000;
+        text-decoration: underline;
+    }
+}

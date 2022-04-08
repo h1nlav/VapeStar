@@ -1,0 +1,167 @@
+.touchGallery {
+    width: 100%;
+}
+
+.touchGallery__wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.touchGallery__canvas {
+    width: 100%;
+    padding-bottom: 60%;
+}
+
+.touchGallery__backButton,
+.touchGallery__forwardButton {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 40px;
+    top: 0;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.touchGallery__buttonNotActive {
+    display: none;
+}
+
+.touchGallery__backButton {
+    padding-left: 5px;
+}
+
+.touchGallery__forwardButton {
+    padding-right: 5px;
+}
+
+.touchGallery__backButton div,
+.touchGallery__forwardButton div {
+    width: 35px;
+    height: 35px;
+    background-color: #fe5000;
+    mask-image: url('../../../static/arrow.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    transition: background-color 0.1s linear;
+}
+
+.touchGallery__backButton div {
+    transform: rotate(-90deg);
+}
+
+.touchGallery__forwardButton div {
+    transform: rotate(90deg);
+}
+
+.touchGallery__backButton {
+    left: 0;
+}
+
+.touchGallery__forwardButton {
+    right: 0;
+}
+
+.touchGallery__canvas {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.touchGallery__pics {
+    position: absolute;
+    z-index: 1;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: 0.1s linear;
+    transform: translateX(-100px);
+}
+
+.touchGallery__pic {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.touchGallery__pic img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dots {
+    min-height: 25px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots__itemContainer {
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dots__item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d2d2d2;
+}
+
+.dots__selectedItem {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fe5000;
+
+}
+
+@media (hover: hover) {
+    .touchGallery__backButton:hover div,
+    .touchGallery__forwardButton:hover div {
+        background-color: #221f1f;
+    }
+
+    .dots__itemContainer:hover .dots__item {
+        background-color: #797878;
+    }
+}
+
+@media (hover: none) {
+
+    .touchGallery__backButton:active div,
+    .touchGallery__forwardButton:active div {
+        background-color: #221f1f;
+    }
+
+    .dots__itemContainer:active .dots__item {
+        background-color: #797878;
+    }
+}
+
+@media (max-width: 550px) {
+    .touchGallery__canvas {
+        padding-bottom: 80%;
+    }
+}
